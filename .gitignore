@@ -1,4 +1,7 @@
 # directory
+.git
+.vs
+
 backup
 
 build_msvc
@@ -6,9 +9,6 @@ build_mingw
 out
 
 target
-
-.vs/
-.git/
 
 # Prerequisites
 *.d
