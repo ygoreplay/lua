@@ -60,12 +60,7 @@ set(library_source
     "src/luaconf.h"
     "src/lualib.h"
 )
-add_library(liblua_static STATIC ${library_source})
+
+add_library(lua STATIC ${library_source})
 set(liblua_static_include "${CMAKE_CURRENT_SOURCE_DIR}/src")
-target_include_directories(liblua_static PUBLIC ${liblua_static_include})
-
-set(lua_source ${library_source} "src/lua.c")
-add_executable (lua ${lua_source})
-
-set(luac_source ${library_source} "src/luac.c")
-add_executable (luac ${luac_source})
+target_include_directories(lua PUBLIC ${liblua_static_include})
