@@ -147,7 +147,7 @@ static lua_CFunction lsys_sym (lua_State *L, void *lib, const char *sym) {
 ** =======================================================================
 */
 
-#include <Windows.h>
+#include <windows.h>
 
 
 /*
