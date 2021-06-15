@@ -7,3 +7,7 @@ add_library (lua STATIC ${AUTO_FILES_RESULT})
 if (MSVC)
     target_compile_options (lua PRIVATE /TP)
 endif()
+
+if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+    target_compile_options(-x c++)
+endif()
