@@ -5,6 +5,7 @@ AutoFiles("." "lua" "\\.(cpp|c|h)$")
 
 add_library (lua STATIC ${AUTO_FILES_RESULT})
 if (MSVC)
+    SET_PROPERTY(SOURCE ${AUTO_FILES_RESULT} PROPERTY COMPILE_FLAGS /TP)
     target_compile_options (lua PRIVATE /TP)
 endif()
 
