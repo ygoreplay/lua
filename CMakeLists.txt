@@ -9,5 +9,5 @@ if (MSVC)
 endif()
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-    target_compile_options(-x c++)
+    target_compile_options(lua PRIVATE -x c++)
 endif()
