@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
 project (lua)
 
 set (AUTO_FILES_RESULT)
-AutoFiles("." "lua" "\\.(cpp|c|h)$")
+AutoFiles("." "\\.(cpp|c|h)$")
 
 add_library (lua STATIC ${AUTO_FILES_RESULT})
 if (MSVC)
